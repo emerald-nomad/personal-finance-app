@@ -1,0 +1,149 @@
+:root {
+  /* COLORS */
+  --color-army-green: #7F9161;
+
+  --color-beige-100: #F8F4F0;
+  --color-beige-500: #98908B;
+
+  --color-blue: #3F82B2;
+
+  --color-brown: #93674F;
+
+  --color-cyan: #82C9D7;
+
+  --color-green: #277C78;
+
+  --color-grey-100: #F2F2F2;
+  --color-grey-300: #B3B3B3;
+  --color-grey-500: #696868;
+  --color-grey-900: #201F24;
+
+  --color-gold: #CAB361;
+
+  --color-magenta: #934F6F;
+
+  --color-navy: #626070;
+
+  --color-navy-grey: #97A0AC;
+
+  --color-orange: #BE6C49;
+
+  --color-purple: #826CB0;
+
+  --color-purple-alternate: #AF81BA;
+
+  --color-red: #C94736;
+
+  --color-turquoise: #597C7C;
+
+  --color-white: #FFFFFF;
+
+  --color-yellow: #F2CDAC;
+
+  /* SPACING */
+  --spacing-50: 4px;
+  --spacing-100: 8px;
+  --spacing-150: 12px;
+  --spacing-200: 16px;
+  --spacing-250: 20px;
+  --spacing-300: 24px;
+  --spacing-400: 32px;
+  --spacing-500: 40px;
+
+  /* FONT WEIGHT */
+  --font-weight-regular: 400;
+  --font-weight-bold: 700;
+
+  /* FONT SIZE */
+  --font-size-text-preset-1: 32px;
+  --font-size-text-preset-2: 20px;
+  --font-size-text-preset-3: 16px;
+  --font-size-text-preset-4: 14px;
+  --font-size-text-preset-5: 12px;
+
+  color: var(--color-grey-900);
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  font-family: var(--font-public-sans);
+  font-weight: var(--font-weight-regular);
+  font-feature-settings: 'liga' off, 'clig' off;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+
+// input,
+// button,
+// textarea,
+// select {
+//   font: inherit;
+// }
+
+#root,
+#__next {
+  isolation: isolate;
+}
+
+
+.text-preset-1 {
+  font-size: var(--font-size-text-preset-1);
+  line-height: 120%;
+  letter-spacing: 0px;
+  font-weight: var(--font-weight-bold);
+}
+
+.text-preset-2 {
+  font-size: var(--font-size-text-preset-2);
+  line-height: 120%;
+  letter-spacing: 0px;
+  font-weight: var(--font-weight-bold);
+}
+
+.text-preset-3 {
+  font-size: var(--font-size-text-preset-3);
+  line-height: 150%;
+  letter-spacing: 0px;
+  font-weight: var(--font-weight-bold);
+}
+
+.text-preset-4 {
+  font-size: var(--font-size-text-preset-4);
+  line-height: 150%;
+  letter-spacing: 0px;
+}
+
+.text-preset-4-bold {
+  font-size: var(--font-size-text-preset-4);
+  line-height: 150%;
+  letter-spacing: 0px;
+  font-weight: var(--font-weight-bold);
+}
+
+.text-preset-5 {
+  font-size: var(--font-size-text-preset-5);
+  line-height: 150%;
+  letter-spacing: 0px;
+}
+
+.text-preset-5-bold {
+  font-size: var(--font-size-text-preset-5);
+  line-height: 150%;
+  letter-spacing: 0px;
+  font-weight: var(--font-weight-bold);
+}
