@@ -1,0 +1,74 @@
+.container {
+  display: flex;
+  width: 320px;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: var(--spacing-50, 4px);
+}
+
+.label {
+  align-self: stretch;
+  color: var(--color-grey-500, #696868);
+}
+
+.input-wrapper {
+  display: flex;
+  padding: var(--spacing-150, 12px) var(--spacing-250, 20px);
+  align-items: center;
+  align-self: stretch;
+  border-radius: var(--spacing-100, 8px);
+  border: 1px solid var(--color-beige-500, #98908b);
+  background: var(--color-white, #fff);
+  outline: none;
+
+  &:hover {
+    border-color: var(--color-grey-500, #696868);
+  }
+
+  &:has(.input:active),
+  &:has(.input:focus) {
+    border-color: var(--color-grey-900, #201f24);
+  }
+}
+
+.input {
+  flex: 1 0 0;
+  outline: none;
+  border: none;
+
+  &::placeholder {
+    flex: 1 0 0;
+    color: var(--color-beige-500, #98908b);
+  }
+
+  & + svg {
+    margin-left: var(--spacing-200, 16px);
+  }
+}
+
+.helper-text {
+  align-self: stretch;
+  color: var(--color-grey-500, #696868);
+  text-align: right;
+}
+
+.prefix {
+  margin-right: var(--spacing-150, 12px);
+  color: var(--color-beige-500, #98908b);
+}
+
+.color-tag {
+  margin-right: var(--spacing-150, 12px);
+
+  circle {
+    fill: currentColor;
+  }
+
+  &.green {
+    color: var(--color-green);
+  }
+
+  &.red {
+    color: var(--color-red);
+  }
+}
