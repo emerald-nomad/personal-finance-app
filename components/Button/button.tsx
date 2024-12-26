@@ -1,7 +1,6 @@
 import { ButtonHTMLAttributes } from "react";
 import clsx from "clsx";
 import styles from "./button.module.scss";
-import Image from "next/image";
 import IconCaretDown from "@/images/icon-caret-down.svg";
 
 interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {

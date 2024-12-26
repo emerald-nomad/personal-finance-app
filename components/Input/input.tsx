@@ -6,7 +6,7 @@ import ColorTagIcon from "@/images/icon-color-tag.svg";
 interface InputProps extends InputHTMLAttributes<HTMLInputElement> {
   id: string;
   label: string;
-  type?: "text" | "select";
+  // type?: "text" | "select";
   helperText?: string;
   suffixIcon?: JSX.Element;
   colorTag?: "green" | "red";
@@ -16,7 +16,7 @@ export function Input({
   label,
   id,
   helperText,
-  type = "text",
+  // type = "text",
   suffixIcon,
   prefix,
   colorTag,

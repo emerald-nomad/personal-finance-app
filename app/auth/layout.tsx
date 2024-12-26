@@ -3,9 +3,9 @@ import { PropsWithChildren } from "react";
 import styles from "./auth-layout.module.scss";
 import LogoLarge from "@/images/logo-large.svg";
 
-interface AuthLayoutProps extends PropsWithChildren {}
+// interface AuthLayoutProps extends PropsWithChildren {}
 
-export default function AuthLayout({ children }: AuthLayoutProps) {
+export default function AuthLayout({ children }: PropsWithChildren) {
   return (
     <main className={clsx([styles["container"]])}>
       <section className={clsx([styles["illustration-container"]])}>
