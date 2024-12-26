@@ -1,0 +1,37 @@
+@use "../../mixins" as *;
+
+.login-container {
+  display: flex;
+  max-width: 560px;
+  padding: var(--spacing-300, 24px) var(--spacing-250, 20px);
+  flex-direction: column;
+  align-items: flex-start;
+  gap: var(--spacing-400, 32px);
+  width: 100%;
+  border-radius: var(--spacing-150, 12px);
+  background: var(--color-white, #fff);
+
+  @include mq(md) {
+    padding: var(--spacing-400, 32px);
+  }
+}
+
+.input-group {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: var(--spacing-200, 16px);
+  align-self: stretch;
+}
+
+.text {
+  display: flex;
+  justify-content: center;
+  gap: var(--spacing-100, 8px);
+  align-self: stretch;
+  color: var(--color-grey-500, #696868);
+}
+
+.link {
+  color: var(--color-grey-900, #201f24);
+}

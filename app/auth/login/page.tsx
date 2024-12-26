@@ -3,6 +3,7 @@ import styles from "./login.module.scss";
 import { Input } from "@/components/Input";
 import { Button } from "@/components/Button";
 import Link from "next/link";
+import ShowPasswordIcon from "@/images/icon-show-password.svg";
 
 export default function Page() {
   return (
@@ -10,7 +11,12 @@ export default function Page() {
       <p className={clsx(["text-preset-1"])}>Login</p>
       <div className={clsx([styles["input-group"]])}>
         <Input id="email" label="Email" />
-        <Input id="password" label="Password" />
+        <Input
+          id="password"
+          label="Password"
+          type="password"
+          suffixIcon={<ShowPasswordIcon />}
+        />
       </div>
       <Button>Login</Button>
       <p className={clsx([styles["text"], "text-preset-4"])}>
