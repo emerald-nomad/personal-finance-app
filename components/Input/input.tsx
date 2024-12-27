@@ -3,7 +3,7 @@ import styles from "./input.module.scss";
 import clsx from "clsx";
 import ColorTagIcon from "@/images/icon-color-tag.svg";
 
-interface InputProps extends InputHTMLAttributes<HTMLInputElement> {
+export interface InputProps extends InputHTMLAttributes<HTMLInputElement> {
   id: string;
   label: string;
   // type?: "text" | "select";
