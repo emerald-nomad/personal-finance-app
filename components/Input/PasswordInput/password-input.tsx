@@ -18,8 +18,7 @@ export function PasswordInput(props: Omit<InputProps, "type" | "suffixIcon">) {
 
   return (
     <Input
-      id="create-password"
-      label="Create Password"
+      {...props}
       helperText="Passwords must be at least 8 characters"
       type={showPassword ? "text" : "password"}
       suffixIcon={showPassword ? hidePasswordIcon : showPasswordIcon}
