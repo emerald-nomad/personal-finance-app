@@ -11,6 +11,11 @@
   color: var(--color-grey-300, #b3b3b3);
   border-bottom: 4px solid transparent;
 
+  svg {
+    width: 24px;
+    height: 24px;
+  }
+
   span {
     display: none;
   }
@@ -40,6 +45,7 @@
     border-radius: 0px 12px 12px 0px;
     align-self: stretch;
     flex: none;
+    border-bottom: none;
     border-left: 4px solid transparent;
 
     &:hover {
