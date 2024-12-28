@@ -1,3 +1,9 @@
+import { PageTitle } from "../_components/PageTitle";
+
 export default function Page() {
-  return <h1>Page</h1>
+  return (
+    <>
+      <PageTitle>Budgets</PageTitle>
+    </>
+  );
 }

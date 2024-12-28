@@ -1,3 +1,11 @@
+import { PageTitle } from "@/app/dashboard/_components/PageTitle";
+import { Summary } from "./_components/Summary";
+
 export default function Home() {
-  return <h1>Dashboard</h1>;
+  return (
+    <>
+      <PageTitle>Overview</PageTitle>
+      <Summary />
+    </>
+  );
 }

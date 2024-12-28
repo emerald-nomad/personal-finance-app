@@ -2,7 +2,7 @@ import { PropsWithChildren } from "react";
 import styles from "./layout.module.scss";
 import clsx from "clsx";
 
-import { DesktopNav } from "@/components/DesktopNav";
+import { DesktopNav } from "@/app/dashboard/_components/DesktopNav";
 
 import OverviewIcon from "@/images/icon-nav-overview.svg";
 import TransactionsIcon from "@/images/icon-nav-transactions.svg";
@@ -10,7 +10,7 @@ import BudgetsIcon from "@/images/icon-nav-budgets.svg";
 import PotIcon from "@/images/icon-nav-pots.svg";
 import RecurringBillIcon from "@/images/icon-nav-recurring-bills.svg";
 
-import { NavItem } from "@/components/NavItem";
+import { NavItem } from "@/app/dashboard/_components/NavItem";
 
 export default function Layout({ children }: PropsWithChildren) {
   return (

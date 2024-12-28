@@ -6,7 +6,6 @@
 
   @include mq(lg) {
     flex-direction: row;
-    // @include grid;
   }
 }
 
@@ -26,6 +25,18 @@
 }
 
 .content {
+  display: flex;
+  padding: var(--spacing-300, 24px) var(--spacing-200, 16px);
+  flex-direction: column;
+  align-items: center;
+  gap: var(--spacing-400, 32px);
+  align-self: stretch;
+  flex: 1 0 0;
+
+  @include mq(md) {
+    padding: var(--spacing-400, 32px) var(--spacing-500, 40px);
+  }
+
   @include mq(lg) {
     order: 1;
   }

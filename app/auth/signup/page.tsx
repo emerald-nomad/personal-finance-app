@@ -1,7 +1,7 @@
 import clsx from "clsx";
 import styles from "./signup.module.scss";
-import { Input, PasswordInput } from "@/components/Input";
-import { Button } from "@/components/Button";
+import { Input, PasswordInput } from "@/app/_components/Input";
+import { Button } from "@/app/_components/Button";
 import Link from "next/link";
 
 export default function Page() {
