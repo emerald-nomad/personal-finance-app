@@ -17,7 +17,7 @@ export default function Page() {
           helperText="Passwords must be at least 8 characters"
         />
       </div>
-      <Button>Create Account</Button>
+      <Button className={styles["button"]}>Create Account</Button>
       <p className={clsx([styles["text"], "text-preset-4"])}>
         Already have an account?{" "}
         <Link

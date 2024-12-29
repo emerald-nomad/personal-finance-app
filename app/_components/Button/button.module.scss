@@ -1,6 +1,6 @@
 .button {
   display: flex;
-  width: 100%;
+  // width: 100%;
   padding: var(--spacing-200, 16px);
   justify-content: center;
   align-items: center;
@@ -8,6 +8,7 @@
   cursor: pointer;
   border-radius: var(--spacing-100, 8px);
   border: 1px solid;
+  text-decoration: none;
 
   &.primary {
     background: var(--color-grey-900, #201f24);

@@ -12,7 +12,7 @@ export default function Page() {
         <Input id="email" label="Email" />
         <PasswordInput id="password" label="Password" />
       </div>
-      <Button>Login</Button>
+      <Button className={styles["button"]}>Login</Button>
       <p className={clsx([styles["text"], "text-preset-4"])}>
         Need to create an account?{" "}
         <Link
