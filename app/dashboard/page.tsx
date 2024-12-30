@@ -4,6 +4,8 @@ import { Summary } from "./_components/Summary";
 import clsx from "clsx";
 import styles from "./overview.module.scss";
 import { Transactions } from "./_components/Transactions";
+import { Budgets } from "./_components/Budgets";
+import { Bills } from "./_components/Bills";
 
 export default function Home() {
   return (
@@ -15,7 +17,10 @@ export default function Home() {
           <Pots />
           <Transactions />
         </div>
-        <div className={clsx([styles["right-side"]])}></div>
+        <div className={clsx([styles["right-side"]])}>
+          <Budgets />
+          <Bills />
+        </div>
       </div>
     </>
   );

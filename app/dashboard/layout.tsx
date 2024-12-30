@@ -11,6 +11,7 @@ import PotIcon from "@/images/icon-nav-pots.svg";
 import RecurringBillIcon from "@/images/icon-nav-recurring-bills.svg";
 
 import { NavItem } from "@/app/dashboard/_components/NavItem";
+import Script from "next/script";
 
 export default function Layout({ children }: PropsWithChildren) {
   return (
@@ -21,6 +22,10 @@ export default function Layout({ children }: PropsWithChildren) {
         {createNavItems("text-preset-5-bold")}
       </nav>
       <DesktopNav />
+      {/* <Script
+        src="https://cdn.jsdelivr.net/npm/chart.js"
+        strategy="beforeInteractive"
+      /> */}
     </main>
   );
 }
