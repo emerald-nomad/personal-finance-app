@@ -16,7 +16,7 @@ export function BudgetChart() {
 
     Chart.register([ArcElement, PieController]);
 
-    new Chart(ctx, {
+    new Chart(ctx as HTMLCanvasElement, {
       type: "pie",
       data: {
         labels: ["Red", "Blue", "Yellow"],
