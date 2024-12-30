@@ -39,5 +39,6 @@
 
   @include mq(lg) {
     order: 1;
+    overflow: scroll;
   }
 }
