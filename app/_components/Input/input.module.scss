@@ -40,10 +40,6 @@
     flex: 1 0 0;
     color: var(--color-beige-500, #98908b);
   }
-
-  & + svg {
-    margin-left: var(--spacing-200, 16px);
-  }
 }
 
 .helper-text {
@@ -71,4 +67,9 @@
   &.red {
     color: var(--color-red);
   }
+}
+
+.suffix-icon {
+  margin-left: var(--spacing-200, 16px);
+  min-width: 16px;
 }

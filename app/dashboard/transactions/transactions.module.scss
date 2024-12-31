@@ -1,0 +1,68 @@
+@use "../../mixins" as *;
+
+.content {
+  display: flex;
+  padding: var(--spacing-300, 24px) var(--spacing-250, 20px);
+  flex-direction: column;
+  align-items: flex-start;
+  gap: var(--spacing-300, 24px);
+  align-self: stretch;
+  border-radius: var(--spacing-150, 12px);
+  background: var(--color-white, #fff);
+
+  @include mq(md) {
+    padding: var(--spacing-400, 32px);
+  }
+}
+
+.icon-container {
+  min-width: 16px;
+}
+
+.input-group {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-300, 24px);
+  align-self: stretch;
+
+  @include mq(md) {
+    justify-content: flex-end;
+  }
+
+  @include mq(lg) {
+    justify-content: space-between;
+  }
+}
+
+.search {
+  @include mq(lg) {
+    max-width: 320px;
+  }
+}
+
+.filters {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: var(--spacing-300, 24px);
+
+  &-icon {
+    min-width: 16px;
+    @include mq(md) {
+      display: none;
+    }
+  }
+
+  &-input {
+    display: none;
+    color: var(--color-grey-500, #696868);
+
+    @include mq(md) {
+      display: flex;
+      align-items: center;
+      gap: var(--spacing-100, 8px);
+      width: fit-content;
+      white-space: nowrap;
+    }
+  }
+}

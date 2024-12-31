@@ -5,11 +5,12 @@ import ColorTagIcon from "@/images/icon-color-tag.svg";
 
 export interface InputProps extends InputHTMLAttributes<HTMLInputElement> {
   id: string;
-  label: string;
+  label?: string;
   // type?: "text" | "select";
   helperText?: string;
   suffixIcon?: JSX.Element;
   colorTag?: "green" | "red";
+  containerClassname?: string;
 }
 
 export function Input({
@@ -20,16 +21,20 @@ export function Input({
   suffixIcon,
   prefix,
   colorTag,
+  containerClassname,
   ...props
 }: InputProps) {
   return (
-    <div className={clsx([styles["container"]])}>
-      <label
-        htmlFor={id}
-        className={clsx([styles["label"], "text-preset-5-bold"])}
-      >
-        {label}
-      </label>
+    <div className={clsx([styles["container"], containerClassname])}>
+      {label && (
+        <label
+          htmlFor={id}
+          className={clsx([styles["label"], "text-preset-5-bold"])}
+        >
+          {label}
+        </label>
+      )}
+
       <div className={clsx([styles["input-wrapper"]])}>
         {colorTag && (
           <ColorTagIcon

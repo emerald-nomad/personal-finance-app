@@ -1,0 +1,35 @@
+.container {
+  display: grid;
+  grid-template-columns: 1fr;
+}
+
+.select {
+  appearance: none;
+  cursor: pointer;
+  grid-column: 1;
+  grid-row: 1;
+  padding: var(--spacing-150, 12px) var(--spacing-250, 20px);
+  padding-right: calc(var(--spacing-250, 20px) + var(--spacing-400, 32px));
+  border-radius: var(--spacing-100, 8px);
+  border: 1px solid var(--color-beige-500, #98908b);
+  background: var(--color-white, #fff);
+  outline: none;
+
+  &:hover {
+    border-color: var(--color-grey-500, #696868);
+  }
+
+  &:has(.input:active),
+  &:has(.input:focus) {
+    border-color: var(--color-grey-900, #201f24);
+  }
+}
+
+.icon {
+  min-width: 16px;
+  grid-column: 1;
+  grid-row: 1;
+  align-self: center;
+  justify-self: end;
+  margin-right: var(--spacing-250, 20px);
+}
