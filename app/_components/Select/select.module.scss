@@ -1,28 +1,32 @@
 .container {
-  display: grid;
-  grid-template-columns: 1fr;
+  position: relative;
 }
 
-.select {
-  appearance: none;
+.button {
   cursor: pointer;
-  grid-column: 1;
-  grid-row: 1;
+  display: grid;
+  grid-template-columns: 1fr;
   padding: var(--spacing-150, 12px) var(--spacing-250, 20px);
-  padding-right: calc(var(--spacing-250, 20px) + var(--spacing-400, 32px));
   border-radius: var(--spacing-100, 8px);
   border: 1px solid var(--color-beige-500, #98908b);
   background: var(--color-white, #fff);
   outline: none;
+  text-align: left;
 
   &:hover {
     border-color: var(--color-grey-500, #696868);
   }
 
-  &:has(.input:active),
-  &:has(.input:focus) {
+  &:active,
+  &:focus {
     border-color: var(--color-grey-900, #201f24);
   }
+}
+
+.name {
+  grid-column: 1;
+  grid-row: 1;
+  padding-right: calc(var(--spacing-250, 20px) + var(--spacing-200, 16px));
 }
 
 .icon {
@@ -31,5 +35,35 @@
   grid-row: 1;
   align-self: center;
   justify-self: end;
-  margin-right: var(--spacing-250, 20px);
+}
+
+.options {
+  position: absolute;
+  top: 50;
+  z-index: 10;
+  display: flex;
+  width: 100%;
+  color: var(--color-grey-900, #201f24);
+  max-height: 300px;
+  padding: var(--spacing-150, 12px) var(--spacing-250, 20px);
+  flex-direction: column;
+  align-items: flex-start;
+  gap: var(--spacing-150, 12px);
+
+  border-radius: var(--spacing-100, 8px);
+  background: var(--color-white, #fff);
+
+  /* drop-shadow */
+  box-shadow: 0px 4px 24px 0px rgba(0, 0, 0, 0.25);
+}
+
+.option {
+  cursor: pointer;
+}
+
+.divider {
+  height: 1px;
+  background: var(--color-grey-100, #f2f2f2);
+  border: none;
+  align-self: stretch;
 }

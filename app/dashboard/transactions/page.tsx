@@ -28,15 +28,25 @@ export default function Page() {
             </div>
             <div className={clsx([styles["filters-input"]])}>
               <span className={clsx(["text-preset-4"])}>Sort By</span>
-              <Select>
-                <option value="latest">Latest</option>
-              </Select>
+              <Select
+                buttonClassname={clsx([styles["sort-by-select"]])}
+                options={[
+                  { name: "Latest", value: "latest" },
+                  { name: "Oldest", value: "oldest" },
+                  { name: "A to Z", value: "desc" },
+                ]}
+              />
             </div>
             <div className={clsx([styles["filters-input"]])}>
               <span className={clsx(["text-preset-4"])}>Category</span>
-              <Select>
-                <option value="all">All Transactions</option>
-              </Select>
+              <Select
+                buttonClassname={clsx([styles["category-select"]])}
+                options={[
+                  { name: "All Transactions", value: "all" },
+                  { name: "Entertainment", value: "entertainment" },
+                  { name: "Bills", value: "bills" },
+                ]}
+              />
             </div>
           </div>
         </div>

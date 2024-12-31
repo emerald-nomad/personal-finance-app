@@ -51,7 +51,7 @@ export function Input({
           id={id}
           {...props}
         />
-        {suffixIcon}
+        <div className={clsx(["suffix-icon"])}>{suffixIcon}</div>
       </div>
       {helperText && (
         <span className={clsx([styles["helper-text"], "text-preset-5"])}>

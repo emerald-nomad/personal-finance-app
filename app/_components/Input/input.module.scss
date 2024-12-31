@@ -32,13 +32,15 @@
 }
 
 .input {
-  flex: 1 0 0;
   outline: none;
   border: none;
+  width: 100%;
+  text-overflow: ellipsis;
 
   &::placeholder {
     flex: 1 0 0;
     color: var(--color-beige-500, #98908b);
+    text-overflow: ellipsis;
   }
 }
 
