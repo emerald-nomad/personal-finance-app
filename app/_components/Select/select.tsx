@@ -3,7 +3,7 @@
 import styles from "./select.module.scss";
 import clsx from "clsx";
 import ArrowDownIcon from "@/images/icon-caret-down.svg";
-import { InputHTMLAttributes, JSX, useState } from "react";
+import { JSX, useState } from "react";
 import {
   Listbox,
   ListboxButton,
