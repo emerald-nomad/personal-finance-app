@@ -12,6 +12,7 @@ import {
   TransactionItemProps,
 } from "./_components/TransactionItem";
 import { JSX } from "react";
+import { Pagination } from "./_components/Pagination";
 
 const transactionItems: TransactionItemProps[] = [
   {
@@ -145,6 +146,7 @@ export default function Page() {
         <ul className={clsx([styles["transactions-list"]])}>
           {createListItems()}
         </ul>
+        <Pagination />
       </div>
     </>
   );
