@@ -2,6 +2,7 @@ import clsx from "clsx";
 import styles from "./transactions.module.scss";
 import { Button } from "@/app/_components/Button";
 import Image from "next/image";
+import { Divider } from "@/app/_components/Divider";
 
 export function Transactions() {
   return (
@@ -83,8 +84,4 @@ function ListItem({ imageUrl, name, amount, date }: ListItemProps) {
       </div>
     </div>
   );
-}
-
-function Divider() {
-  return <hr className={clsx([styles["divider"]])} />;
 }

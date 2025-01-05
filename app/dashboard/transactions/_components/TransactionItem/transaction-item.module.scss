@@ -1,0 +1,68 @@
+.transaction-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  align-self: stretch;
+  border-radius: var(--spacing-100, 8px);
+}
+
+.metadata {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-150, 12px);
+  flex: 1 0 0;
+
+  &-icon {
+  }
+
+  &-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    gap: var(--spacing-50, 4px);
+    flex: 1 0 0;
+  }
+
+  &-name {
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 1;
+    align-self: stretch;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  &-category {
+    color: var(--color-grey-500, #696868);
+  }
+}
+
+.data {
+  display: flex;
+  // width: 112px;
+  // height: 43px;
+  // max-width: 128px;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-end;
+  gap: var(--spacing-50, 4px);
+  text-align: right;
+
+  &-amount {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    gap: var(--spacing-100, 8px);
+    color: var(--color-green, #277c78);
+
+    &.expense {
+      color: var(--color-grey-900, #201f24);
+    }
+  }
+
+  &-date {
+    color: var(--color-grey-500, #696868);
+  }
+}
