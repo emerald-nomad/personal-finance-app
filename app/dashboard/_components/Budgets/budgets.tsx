@@ -1,7 +1,7 @@
 import clsx from "clsx";
 import styles from "./budgets.module.scss";
 import { Button } from "@/app/_components/Button";
-import { BudgetChart } from "./Chart";
+import { BudgetChart } from "@/app/_components/Chart";
 
 export function Budgets() {
   return (
@@ -14,7 +14,7 @@ export function Budgets() {
       </div>
       <div className={clsx([styles["content"]])}>
         <div className={clsx([styles["chart"]])}>
-          <BudgetChart />
+          <BudgetChart id="overview-budget-chart" />
         </div>
         <div className={clsx([styles["budgets"]])}>
           <BudgetMicro title="Entertainment" amount={50} colorTag="green" />

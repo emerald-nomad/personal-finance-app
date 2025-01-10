@@ -5,13 +5,17 @@ import clsx from "clsx";
 import { useEffect } from "react";
 import styles from "./chart.module.scss";
 
-export function BudgetChart() {
+interface BudgetChartProps {
+  id: string;
+}
+
+export function BudgetChart({ id }: BudgetChartProps) {
   useEffect(() => {
     createChart();
   }, []);
 
   function createChart() {
-    const ctx = document.getElementById("overview-budget-chart")!;
+    const ctx = document.getElementById(id)!;
     console.log({ ctx });
 
     Chart.register([ArcElement, PieController]);
@@ -38,7 +42,7 @@ export function BudgetChart() {
 
   return (
     <div className={clsx([styles["chart-container"]])}>
-      <canvas id="overview-budget-chart"></canvas>
+      <canvas id={id}></canvas>
       <Overlay />
       <TextOverlay />
       <div className={clsx([styles["text"]])}>
