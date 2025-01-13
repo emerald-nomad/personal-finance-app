@@ -1,7 +1,7 @@
 .divider {
   height: 1px;
-  background: var(--color-grey-100, #f2f2f2);
+  background: var(--color-grey-500, #696868);
   border: none;
   align-self: stretch;
-  margin: var(--spacing-250, 20px) 0;
+  opacity: 0.15;
 }

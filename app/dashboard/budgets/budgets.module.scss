@@ -1,5 +1,17 @@
 @use "../../mixins" as *;
 
+.content {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: var(--spacing-300, 24px);
+  align-self: stretch;
+
+  @include mq(lg) {
+    flex-direction: row;
+  }
+}
+
 .left-side {
   display: flex;
   padding: var(--spacing-300, 24px) var(--spacing-250, 20px);
@@ -19,6 +31,19 @@
   @include mq(lg) {
     flex-direction: column;
     align-items: flex-start;
+    min-width: 428px;
+    align-self: initial;
+  }
+}
+
+.chart-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+
+  @include mq(md) {
+    min-width: 300px;
   }
 }
 
