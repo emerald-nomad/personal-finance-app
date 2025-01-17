@@ -153,3 +153,13 @@ svg {
   letter-spacing: 0px;
   font-weight: var(--font-weight-bold);
 }
+
+#headlessui-portal-root {
+  // position: absolute;
+  // top: 0;
+  // bottom: 0;
+  // left: 0;
+  // right: 0;
+  // z-index: 10;
+  // isolation: isolate;
+}

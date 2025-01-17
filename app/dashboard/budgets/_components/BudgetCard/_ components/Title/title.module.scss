@@ -1,0 +1,36 @@
+.title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  align-self: stretch;
+
+  & > div {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-200, 16px);
+
+    &.cyan {
+      color: var(--color-cyan, #82c9d7);
+    }
+
+    &.green {
+      color: var(--color-green, #277c78);
+    }
+
+    &.yellow {
+      color: var(--color-yellow, #f2cdac);
+    }
+
+    &.navy {
+      color: var(--color-navy, #626070);
+    }
+
+    circle {
+      fill: currentColor;
+    }
+
+    span {
+      color: var(--color-grey-900, #201f24);
+    }
+  }
+}
