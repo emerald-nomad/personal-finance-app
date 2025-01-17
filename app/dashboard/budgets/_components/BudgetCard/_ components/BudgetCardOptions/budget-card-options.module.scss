@@ -36,3 +36,19 @@
     color: var(--color-red, #c94736);
   }
 }
+
+.form {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: var(--spacing-200, 16px);
+  align-self: stretch;
+}
+
+.select-input {
+  width: 100%;
+}
+
+.submit {
+  width: 100%;
+}

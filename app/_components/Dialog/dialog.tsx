@@ -7,14 +7,22 @@ import {
 import clsx from "clsx";
 import styles from "./dialog.module.scss";
 import CloseIcon from "@/images/icon-close-modal.svg";
+import { PropsWithChildren } from "react";
 
-interface DialogProps {
+interface DialogProps extends PropsWithChildren {
   title: string;
+  description?: string;
   open: boolean;
   setOpen: (open: boolean) => void;
 }
 
-export function Dialog({ title, open, setOpen }: DialogProps) {
+export function Dialog({
+  children,
+  description,
+  title,
+  open,
+  setOpen,
+}: DialogProps) {
   return (
     <HeadlessDialog
       open={open}
@@ -32,6 +40,14 @@ export function Dialog({ title, open, setOpen }: DialogProps) {
               {title}
               <CloseIcon onClick={() => setOpen(false)} />
             </DialogTitle>
+
+            {description && (
+              <p className={clsx(["text-preset-4", styles["description"]])}>
+                {description}
+              </p>
+            )}
+
+            <section className={clsx([styles["children"]])}>{children}</section>
           </DialogPanel>
         </div>
       </div>

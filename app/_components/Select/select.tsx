@@ -20,12 +20,16 @@ interface SelectProps {
   options: SelectOption[];
   containerClassname?: string;
   buttonClassname?: string;
+  label?: string;
+  prefix?: JSX.Element;
 }
 
 export function Select({
   buttonClassname,
   containerClassname,
   options,
+  label,
+  prefix,
 }: SelectProps) {
   const [selected, setSelected] = useState(options[0]);
 
@@ -63,8 +67,18 @@ export function Select({
   return (
     <Listbox value={selected} onChange={setSelected}>
       <div className={clsx([styles["container"], containerClassname])}>
-        <ListboxButton className={clsx([styles["button"], buttonClassname])}>
-          <span className={clsx([styles["name"]])}>{selected.name}</span>
+        {label && (
+          <span className={clsx([styles["label"], "text-preset-5-bold"])}>
+            {label}
+          </span>
+        )}
+        <ListboxButton
+          className={clsx([styles["button"], buttonClassname, "text-preset-4"])}
+        >
+          <div className={clsx([styles["name"]])}>
+            {prefix}
+            {selected.name}
+          </div>
 
           <div className={clsx([styles["icon"]])}>
             <ArrowDownIcon />
