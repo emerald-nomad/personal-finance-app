@@ -31,7 +31,8 @@
     }
   }
 
-  &.tertiary {
+  &.tertiary,
+  &.clear {
     display: inline-flex;
     align-items: center;
     gap: var(--spacing-150, 12px);

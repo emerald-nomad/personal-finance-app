@@ -14,9 +14,13 @@ import ColorTagIcon from "@/images/icon-color-tag.svg";
 
 export function BudgetCardOptions() {
   const [editBudgetOpen, setEditBudgetOpen] = useState(false);
+  const [deleteBudgetOpen, setDeleteBudgetOpen] = useState(false);
 
-  function toggleDialog() {
+  function toggleEditBudgetDialog() {
     setEditBudgetOpen(!editBudgetOpen);
+  }
+  function toggleDeleteBudgetDialog() {
+    setDeleteBudgetOpen(!deleteBudgetOpen);
   }
 
   return (
@@ -26,12 +30,13 @@ export function BudgetCardOptions() {
           <ElipsisIcon />
         </MenuButton>
         <MenuItems className={clsx(styles["items"])}>
-          <EditBudgetButton toggleDialog={toggleDialog} />
+          <EditBudgetButton toggleDialog={toggleEditBudgetDialog} />
           <Divider />
-          <DeleteBudget />
+          <DeleteBudgetButton toggleDialog={toggleDeleteBudgetDialog} />
         </MenuItems>
       </Menu>
       <EditBudgetForm open={editBudgetOpen} setOpen={setEditBudgetOpen} />
+      <DeleteBudgetForm open={deleteBudgetOpen} setOpen={setDeleteBudgetOpen} />
     </>
   );
 }
@@ -93,10 +98,45 @@ function EditBudgetForm({ open, setOpen }: EditBudgetFormProps) {
   );
 }
 
-function DeleteBudget() {
+interface DeleteBudgetButtonProps {
+  toggleDialog: () => void;
+}
+
+function DeleteBudgetButton({ toggleDialog }: DeleteBudgetButtonProps) {
   return (
     <MenuItem>
-      <button className="text-preset-4">Delete Budget</button>
+      <button className="text-preset-4" onClick={toggleDialog}>
+        Delete Budget
+      </button>
     </MenuItem>
+  );
+}
+
+interface DeleteBudgetFormProps {
+  open: boolean;
+  setOpen: (open: boolean) => void;
+}
+
+function DeleteBudgetForm({ open, setOpen }: DeleteBudgetFormProps) {
+  return (
+    <Dialog
+      title="Delete Budget"
+      description="Are you sure you want to delete this budget? This action cannot be reversed, and all the data inside it will be removed forever."
+      open={open}
+      setOpen={setOpen}
+    >
+      <div className={clsx([styles["form"]])}>
+        <Button color="destroy" className={clsx([styles["submit"]])}>
+          Yes, Confirm Deletion
+        </Button>
+        <Button
+          color="clear"
+          onClick={() => setOpen(false)}
+          className={clsx([styles["submit"]])}
+        >
+          No, I want to go back
+        </Button>
+      </div>
+    </Dialog>
   );
 }

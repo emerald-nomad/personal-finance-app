@@ -5,7 +5,7 @@ import IconCaretDown from "@/images/icon-caret-down.svg";
 import Link from "next/link";
 
 interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
-  color?: "primary" | "secondary" | "tertiary" | "destroy";
+  color?: "primary" | "secondary" | "clear" | "tertiary" | "destroy";
   className?: string;
   as?: "link" | "buton";
   href?: string;
@@ -17,15 +17,19 @@ export function Button({
   className,
   as = "buton",
   href = "",
+  ...props
 }: ButtonProps) {
   return as == "buton" ? (
     <button
       className={clsx([
         styles.button,
         styles[color],
-        color === "tertiary" ? "text-preset-4" : "text-preset-4-bold",
+        color === "tertiary" || color === "clear"
+          ? "text-preset-4"
+          : "text-preset-4-bold",
         className,
       ])}
+      {...props}
     >
       {children}
       {color === "tertiary" && <IconCaretDown />}
