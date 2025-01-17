@@ -10,10 +10,6 @@ interface BudgetChartProps {
 }
 
 export function BudgetChart({ id }: BudgetChartProps) {
-  useEffect(() => {
-    createChart();
-  }, []);
-
   function createChart() {
     const ctx = document.getElementById(id)!;
     console.log({ ctx });
@@ -39,6 +35,10 @@ export function BudgetChart({ id }: BudgetChartProps) {
       },
     });
   }
+
+  useEffect(() => {
+    createChart();
+  }, [createChart]);
 
   return (
     <div className={clsx([styles["chart-container"]])}>

@@ -8,7 +8,7 @@ export function Budgets() {
     <div className={clsx([styles["budgets-container"]])}>
       <div className={clsx([styles["title"]])}>
         <span className={clsx(["text-preset-2"])}>Budgets</span>
-        <Button as="link" href="/dashboard/recurring" color="tertiary">
+        <Button as="link" href="/dashboard/budgets" color="tertiary">
           See Details
         </Button>
       </div>

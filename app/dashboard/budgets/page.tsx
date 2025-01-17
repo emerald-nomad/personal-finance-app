@@ -1,5 +1,3 @@
-"use client";
-
 import { Button } from "@/app/_components/Button";
 import { BudgetChart } from "@/app/_components/Chart";
 import { PageTitle } from "../_components/PageTitle";
@@ -7,7 +5,6 @@ import styles from "./budgets.module.scss";
 import clsx from "clsx";
 import { Summary } from "./_components/Summary";
 import { BudgetCard, BudgetCardProps } from "./_components/BudgetCard";
-import { Dialog } from "@/app/_components/Dialog";
 
 const budgetCards: BudgetCardProps[] = [
   {
@@ -107,7 +104,6 @@ const budgetCards: BudgetCardProps[] = [
 export default function Page() {
   return (
     <>
-      {/* <Dialog open setOpen={() => {}} /> */}
       <PageTitle>
         Budgets <Button>+ Add New Budget</Button>
       </PageTitle>
