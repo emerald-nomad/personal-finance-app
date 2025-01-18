@@ -92,7 +92,9 @@ function EditBudgetForm({ open, setOpen }: EditBudgetFormProps) {
           prefix={<ColorTagIcon />}
           options={[{ name: "Green", value: "green" }]}
         />
-        <Button className={clsx([styles["submit"]])}>Save Changes</Button>
+        <Button type="submit" className={clsx([styles["submit"]])}>
+          Save Changes
+        </Button>
       </form>
     </Dialog>
   );

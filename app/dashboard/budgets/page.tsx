@@ -5,6 +5,7 @@ import styles from "./budgets.module.scss";
 import clsx from "clsx";
 import { Summary } from "./_components/Summary";
 import { BudgetCard, BudgetCardProps } from "./_components/BudgetCard";
+import { AddNewBudget } from "./_components/AddNewBudget";
 
 const budgetCards: BudgetCardProps[] = [
   {
@@ -105,7 +106,7 @@ export default function Page() {
   return (
     <>
       <PageTitle>
-        Budgets <Button>+ Add New Budget</Button>
+        Budgets <AddNewBudget />
       </PageTitle>
       <div className={clsx([styles["content"]])}>
         <section className={clsx([styles["left-side"]])}>
