@@ -1,0 +1,54 @@
+.container {
+  position: relative;
+  isolation: isolate;
+
+  button {
+    border: none;
+    background: transparent;
+    cursor: pointer;
+  }
+}
+
+.items {
+  position: absolute;
+  display: flex;
+  max-height: 300px;
+  padding: var(--spacing-150, 12px) var(--spacing-250, 20px);
+  flex-direction: column;
+  align-items: flex-start;
+  gap: var(--spacing-150, 12px);
+  right: 0;
+  top: 20px;
+  width: fit-content;
+  white-space: nowrap;
+
+  border-radius: var(--spacing-100, 8px);
+  background: var(--color-white, #fff);
+
+  /* drop-shadow */
+  box-shadow: 0px 4px 24px 0px rgba(0, 0, 0, 0.25);
+
+  button {
+    padding: 0;
+  }
+
+  button:nth-of-type(2) {
+    color: var(--color-red, #c94736);
+  }
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: var(--spacing-200, 16px);
+  align-self: stretch;
+}
+
+.select-input {
+  width: 100%;
+}
+
+.submit {
+  width: 100%;
+}

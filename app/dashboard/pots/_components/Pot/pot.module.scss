@@ -1,0 +1,11 @@
+.pot {
+  display: flex;
+  // height: 317px;
+  padding: var(--spacing-300, 24px) var(--spacing-250, 20px);
+  flex-direction: column;
+  align-items: flex-start;
+  gap: var(--spacing-400, 32px);
+  align-self: stretch;
+  border-radius: var(--spacing-150, 12px);
+  background: var(--color-white, #fff);
+}
