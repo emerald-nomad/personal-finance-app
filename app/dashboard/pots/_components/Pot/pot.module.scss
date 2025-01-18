@@ -9,3 +9,14 @@
   border-radius: var(--spacing-150, 12px);
   background: var(--color-white, #fff);
 }
+
+.button-group {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--spacing-200, 16px);
+  align-self: stretch;
+
+  & button {
+    width: 100%;
+  }
+}
