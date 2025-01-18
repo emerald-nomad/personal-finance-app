@@ -1,4 +1,3 @@
-import { Button } from "@/app/_components/Button";
 import { BudgetChart } from "@/app/_components/Chart";
 import { PageTitle } from "../_components/PageTitle";
 import styles from "./budgets.module.scss";
