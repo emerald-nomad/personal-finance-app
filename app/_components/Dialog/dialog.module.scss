@@ -1,3 +1,5 @@
+@use "../../mixins" as *;
+
 .dialog {
   position: relative;
   z-index: 10;
@@ -28,7 +30,7 @@
 .content {
   border-radius: var(--spacing-150, 12px);
   background: var(--color-white, #fff);
-  margin: 0 var(--spacing-200, 16px);
+  margin: 0 var(--spacing-250, 20px);
   padding: var(--spacing-300, 24px) var(--spacing-250, 20px);
   display: flex;
   width: 100%;
@@ -36,6 +38,10 @@
   flex-direction: column;
   align-items: flex-start;
   gap: var(--spacing-250, 20px);
+
+  @include mq(md) {
+    padding: var(--spacing-400, 32px);
+  }
 }
 
 .title {
