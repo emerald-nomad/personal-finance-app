@@ -19,7 +19,7 @@ export function Pot({ colorTag, title, target, totalSaved }: PotProps) {
       <Title colorTag={colorTag} title={title} />
       <Amount colorTag={colorTag} target={target} totalSaved={totalSaved} />
       <div className={clsx([styles["button-group"]])}>
-        <AddMoney />
+        <AddMoney target={target} totalSaved={totalSaved} />
         <Withdraw />
       </div>
     </div>
