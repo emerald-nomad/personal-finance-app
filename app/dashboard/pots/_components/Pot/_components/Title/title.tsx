@@ -5,7 +5,7 @@ import { PotOptions } from "../PotOptions";
 
 interface TitleProps {
   title: string;
-  colorTag: "cyan" | "green" | "yellow" | "navy";
+  colorTag: "cyan" | "green" | "yellow" | "navy" | "purple";
 }
 
 export function Title({ colorTag, title }: TitleProps) {

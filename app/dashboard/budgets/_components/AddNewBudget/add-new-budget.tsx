@@ -4,10 +4,10 @@ import { Button } from "@/app/_components/Button";
 import { Dialog } from "@/app/_components/Dialog";
 import { useState } from "react";
 import styles from "./add-new-budget.module.scss";
-import ColorTagIcon from "@/images/icon-color-tag.svg";
 import clsx from "clsx";
 import { Select } from "@/app/_components/Select";
 import { Input } from "@/app/_components/Input";
+import { ColorTagSelect } from "@/app/_components/ColorTagSelect";
 
 export function AddNewBudget() {
   const [open, setOpen] = useState(false);
@@ -41,11 +41,17 @@ export function AddNewBudget() {
             type="number"
             defaultValue={0}
           />
-          <Select
-            label="Color Tag"
+          <ColorTagSelect
             buttonClassname={clsx([styles["select-input"]])}
-            prefix={<ColorTagIcon />}
-            options={[{ name: "Green", value: "green" }]}
+            options={[
+              { name: "Green", value: "green" },
+              { name: "Yellow", value: "yellow", inUse: true },
+              { name: "Cyan", value: "cyan" },
+              { name: "Navy", value: "navy", inUse: true },
+              { name: "Red", value: "red", inUse: true },
+              { name: "Purple", value: "purple" },
+              { name: "Turquoise", value: "turquoise" },
+            ]}
           />
           <Button type="submit" className={clsx([styles["submit"]])}>
             Save Changes

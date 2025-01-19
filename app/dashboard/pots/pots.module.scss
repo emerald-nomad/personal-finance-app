@@ -1,9 +1,16 @@
+@use "../../mixins" as *;
+
 .pots {
   display: flex;
-  max-width: 800px;
+  // max-width: 800px;
   flex-direction: column;
   align-items: center;
   gap: var(--spacing-300, 24px);
   align-self: stretch;
   padding: 0;
+
+  @include mq(lg) {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
 }

@@ -25,6 +25,10 @@
       color: var(--color-navy, #626070);
     }
 
+    &.purple {
+      color: var(--color-purple, #826cb0);
+    }
+
     circle {
       fill: currentColor;
     }

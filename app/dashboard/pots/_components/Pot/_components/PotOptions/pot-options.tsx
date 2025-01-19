@@ -11,6 +11,7 @@ import { Dialog } from "@/app/_components/Dialog";
 import { Input } from "@/app/_components/Input";
 import { Select } from "@/app/_components/Select";
 import { Button } from "@/app/_components/Button";
+import { ColorTagSelect } from "@/app/_components/ColorTagSelect";
 
 export function PotOptions() {
   const [editPotOpen, setEditPotOpen] = useState(false);
@@ -77,11 +78,17 @@ function EditPotForm({ open, setOpen }: EditPotFormProps) {
           helperText="0 of 30 characters left"
         />
         <Input id="target" label="Target" type="number" prefix="$" />
-        <Select
-          label="Color Tag"
+        <ColorTagSelect
           buttonClassname={clsx([styles["select-input"]])}
-          prefix={<ColorTagIcon />}
-          options={[{ name: "Green", value: "green" }]}
+          options={[
+            { name: "Green", value: "green" },
+            { name: "Yellow", value: "yellow", inUse: true },
+            { name: "Cyan", value: "cyan" },
+            { name: "Navy", value: "navy", inUse: true },
+            { name: "Red", value: "red", inUse: true },
+            { name: "Purple", value: "purple" },
+            { name: "Turquoise", value: "turquoise" },
+          ]}
         />
         <Button type="submit" className={clsx([styles["submit"]])}>
           Save Changes

@@ -39,6 +39,42 @@
   display: inline-flex;
   align-items: center;
   gap: var(--spacing-150, 12px);
+
+  &.cyan {
+    color: var(--color-cyan, #82c9d7);
+  }
+
+  &.green {
+    color: var(--color-green, #277c78);
+  }
+
+  &.yellow {
+    color: var(--color-yellow, #f2cdac);
+  }
+
+  &.navy {
+    color: var(--color-navy, #626070);
+  }
+
+  &.purple {
+    color: var(--color-purple, #826cb0);
+  }
+
+  &.red {
+    color: var(--color-red, #c94736);
+  }
+
+  &.turquoise {
+    color: var(--color-turquoise, #597c7c);
+  }
+
+  circle {
+    fill: currentColor;
+  }
+
+  span {
+    color: var(--color-grey-900, #201f24);
+  }
 }
 
 .icon {
@@ -51,7 +87,7 @@
 
 .options {
   position: absolute;
-  top: 80px;
+  top: 60px;
   z-index: 10;
   display: flex;
   width: 100%;
@@ -72,6 +108,46 @@
 
 .option {
   cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-150, 12px);
+  width: 100%;
+
+  &.cyan {
+    color: var(--color-cyan, #82c9d7);
+  }
+
+  &.green {
+    color: var(--color-green, #277c78);
+  }
+
+  &.yellow {
+    color: var(--color-yellow, #f2cdac);
+  }
+
+  &.navy {
+    color: var(--color-navy, #626070);
+  }
+
+  &.purple {
+    color: var(--color-purple, #826cb0);
+  }
+
+  &.red {
+    color: var(--color-red, #c94736);
+  }
+
+  &.turquoise {
+    color: var(--color-turquoise, #597c7c);
+  }
+
+  circle {
+    fill: currentColor;
+  }
+
+  span {
+    color: var(--color-grey-900, #201f24);
+  }
 }
 
 .divider {
@@ -79,4 +155,18 @@
   background: var(--color-grey-100, #f2f2f2);
   border: none;
   align-self: stretch;
+}
+
+.in-use {
+  span {
+    color: var(--color-grey-500, #696868);
+  }
+
+  svg {
+    opacity: 0.1;
+  }
+}
+
+.suffix {
+  margin-left: auto;
 }

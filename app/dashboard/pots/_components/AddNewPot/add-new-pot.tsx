@@ -6,8 +6,7 @@ import clsx from "clsx";
 import { useState } from "react";
 import styles from "./add-new-pot.module.scss";
 import { Input } from "@/app/_components/Input";
-import { Select } from "@/app/_components/Select";
-import ColorTagIcon from "@/images/icon-color-tag.svg";
+import { ColorTagSelect } from "@/app/_components/ColorTagSelect";
 
 export function AddNewPot() {
   const [open, setOpen] = useState(false);
@@ -39,11 +38,17 @@ export function AddNewPot() {
             placeholder="e.g. 2000"
           />
 
-          <Select
-            label="Color Tag"
+          <ColorTagSelect
             buttonClassname={clsx([styles["select-input"]])}
-            prefix={<ColorTagIcon />}
-            options={[{ name: "Green", value: "green" }]}
+            options={[
+              { name: "Green", value: "green" },
+              { name: "Yellow", value: "yellow", inUse: true },
+              { name: "Cyan", value: "cyan" },
+              { name: "Navy", value: "navy", inUse: true },
+              { name: "Red", value: "red", inUse: true },
+              { name: "Purple", value: "purple" },
+              { name: "Turquoise", value: "turquoise" },
+            ]}
           />
 
           <Button type="submit" className={clsx([styles["submit"]])}>

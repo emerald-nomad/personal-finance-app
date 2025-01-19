@@ -6,11 +6,18 @@ import { AddMoney } from "../AddMoney";
 import { Withdraw } from "../Withdraw/withdraw";
 import { Amount } from "./_components/Amount";
 
-export function Pot() {
+export interface PotProps {
+  title: string;
+  colorTag: "cyan" | "green" | "yellow" | "navy" | "purple";
+  target: number;
+  totalSaved: number;
+}
+
+export function Pot({ colorTag, title, target, totalSaved }: PotProps) {
   return (
     <div className={clsx([styles["pot"]])}>
-      <Title colorTag="green" title="Savings" />
-      <Amount />
+      <Title colorTag={colorTag} title={title} />
+      <Amount colorTag={colorTag} target={target} totalSaved={totalSaved} />
       <div className={clsx([styles["button-group"]])}>
         <AddMoney />
         <Withdraw />
