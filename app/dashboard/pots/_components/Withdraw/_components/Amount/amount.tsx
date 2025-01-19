@@ -25,7 +25,7 @@ export function Amount({ target, totalSaved }: AmountProps) {
           />
           <div
             style={{ width: `calc(${percentToTotal} - 1px)` }}
-            className={clsx([styles["bar-add"]])}
+            className={clsx([styles["bar-remove"]])}
           />
         </div>
         <div className={clsx([styles["target-text"]])}>
