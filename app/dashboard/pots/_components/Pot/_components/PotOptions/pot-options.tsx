@@ -2,14 +2,12 @@
 
 import { Menu, MenuButton, MenuItem, MenuItems } from "@headlessui/react";
 import ElipsisIcon from "@/images/icon-ellipsis.svg";
-import ColorTagIcon from "@/images/icon-color-tag.svg";
 import styles from "./pot-options.module.scss";
 import clsx from "clsx";
 import { useState } from "react";
 import { Divider } from "@/app/_components/Divider";
 import { Dialog } from "@/app/_components/Dialog";
 import { Input } from "@/app/_components/Input";
-import { Select } from "@/app/_components/Select";
 import { Button } from "@/app/_components/Button";
 import { ColorTagSelect } from "@/app/_components/ColorTagSelect";
 

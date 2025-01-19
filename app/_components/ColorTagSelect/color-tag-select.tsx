@@ -24,7 +24,6 @@ interface ColorTagSelectProps {
   containerClassname?: string;
   buttonClassname?: string;
   label?: string;
-  prefix?: JSX.Element;
 }
 
 export function ColorTagSelect({
@@ -32,7 +31,6 @@ export function ColorTagSelect({
   containerClassname,
   options,
   label,
-  prefix,
 }: ColorTagSelectProps) {
   const [selected, setSelected] = useState(options[0]);
 
