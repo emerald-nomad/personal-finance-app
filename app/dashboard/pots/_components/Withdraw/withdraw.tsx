@@ -9,11 +9,12 @@ import { Amount } from "./_components/Amount";
 import { Input } from "@/app/_components/Input";
 
 interface WithdrawProps {
+  title: string;
   target: number;
   totalSaved: number;
 }
 
-export function Withdraw({ target, totalSaved }: WithdrawProps) {
+export function Withdraw({ title, target, totalSaved }: WithdrawProps) {
   const [open, setOpen] = useState(false);
 
   function toggleDialog() {
@@ -25,7 +26,7 @@ export function Withdraw({ target, totalSaved }: WithdrawProps) {
         Withdraw
       </Button>
       <Dialog
-        title="Withdraw from ‘Savings’"
+        title={`Withdraw from '${title}'`}
         description="Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Phasellus  hendrerit. Pellentesque aliquet nibh nec urna. In nisi neque, aliquet."
         open={open}
         setOpen={setOpen}
