@@ -1,0 +1,40 @@
+.summary {
+  display: flex;
+  padding: var(--spacing-250, 20px);
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  gap: var(--spacing-250, 20px);
+  align-self: stretch;
+  border-radius: var(--spacing-150, 12px);
+  background: var(--color-white, #fff);
+  flex: 1;
+}
+
+.texts {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: var(--spacing-200, 16px);
+  align-self: stretch;
+}
+
+.summary-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+.title {
+  color: var(--color-grey-500, #696868);
+}
+
+.value {
+  text-align: right;
+}
+
+.red .title,
+.red .value {
+  color: var(--color-red, #c94736);
+}

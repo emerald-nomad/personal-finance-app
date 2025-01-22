@@ -1,0 +1,32 @@
+@use "../../mixins" as *;
+
+.recurring {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: var(--spacing-300, 24px);
+  align-self: stretch;
+}
+
+.left-side {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: var(--spacing-150, 12px);
+  align-self: stretch;
+
+  @include mq(md) {
+    flex-direction: row;
+    gap: var(--spacing-300, 24px);
+  }
+
+  @include mq(lg) {
+    max-width: 337px;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: var(--spacing-300, 24px);
+  }
+}
+
+.right-side {
+}

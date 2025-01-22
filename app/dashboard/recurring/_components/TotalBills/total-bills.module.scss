@@ -1,0 +1,33 @@
+@use "../../../../mixins" as *;
+
+.total-bills {
+  display: flex;
+  padding: var(--spacing-300, 24px) var(--spacing-250, 20px);
+  align-items: center;
+  gap: var(--spacing-250, 20px);
+  align-self: stretch;
+  border-radius: var(--spacing-150, 12px);
+  background: var(--color-grey-900, #201f24);
+  flex: 1;
+
+  @include mq(md) {
+    flex-direction: column;
+    gap: var(--spacing-400, 32px);
+    justify-content: flex-end;
+    align-items: flex-start;
+  }
+}
+
+.icon-container {
+  min-width: 40px;
+  min-height: 40px;
+}
+
+.text {
+  display: flex;
+  // width: 303px;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 11px;
+  color: var(--color-white, #fff);
+}
