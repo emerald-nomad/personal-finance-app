@@ -3,6 +3,8 @@
 .main {
   display: flex;
   flex-direction: column;
+  height: 100%;
+  overflow: hidden;
 
   @include mq(lg) {
     flex-direction: row;
@@ -32,6 +34,7 @@
   gap: var(--spacing-400, 32px);
   align-self: stretch;
   flex: 1 0 0;
+  overflow: scroll;
 
   @include mq(md) {
     padding: var(--spacing-400, 32px) var(--spacing-500, 40px);

@@ -16,7 +16,7 @@ export default function Layout({ children }: PropsWithChildren) {
   return (
     <main className={clsx([styles["main"]])}>
       <section className={clsx([styles["content"]])}>{children}</section>
-
+      
       <nav className={clsx([styles["mobile-nav"]])}>
         {createNavItems("text-preset-5-bold")}
       </nav>
